@@ -1,0 +1,43 @@
+.biscuit {
+  --r: 16px; /* radius of circles */
+  padding: calc(3*var(--r));
+  transition: all 0.3s ease;
+  mask: 
+    linear-gradient(#000 0 0) no-repeat
+      50%/calc(100% - 1.5*var(--r)) calc(100% - 1.5*var(--r)), 
+    radial-gradient(farthest-side,#000 97%,#0000) 
+      0 0/calc(1.5*var(--r)) calc(1.5*var(--r)) round;
+}
+
+.biscuit--plain {
+  background: #f5f5f5;
+}
+
+.biscuit--chocolate {
+  background: #3c2a21;
+  color: white;
+}
+
+.biscuit--sugar {
+  background: #fff5e6;
+}
+
+.biscuit--small {
+  --r: 8px;
+  font-size: 12px;
+}
+
+.biscuit--medium {
+  --r: 16px;
+  font-size: 14px;
+}
+
+.biscuit--large {
+  --r: 24px;
+  font-size: 16px;
+}
+
+.biscuit:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+} 
